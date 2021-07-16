@@ -1,0 +1,13 @@
+<div class="my-3 card">
+  <div class="card-body bg-dark text-light" > 
+    
+    <h5 [ngClass]="{'strike':!todo.active}">{{todo.title}}</h5>
+    <p [ngClass]="{'strike':!todo.active}">{{todo.desc}}</p>
+    <button class="btn btn-sm btn-danger " (click)= "onClick(todo)"> Delete </button> 
+    <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="todo" (click)="onCheckboxClick(todo)" [checked]="!todo.active">
+        <label class="form-check-label" for="todo{{i}}">Done</label>
+      </div>
+  </div>
+    <!-- whenever someone click on that button function named onclick(present in .ts file ) will be implemented -->
+</div>
